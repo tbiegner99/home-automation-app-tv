@@ -1,7 +1,7 @@
 import { BaseActionCreator } from '@tbiegner99/ui-app-components';
 
-import TVGuideDatasource from '../../datasource/tv/TVGuideDatasource';
-import TVEvents from '../../events/TVEvents';
+import TVGuideDatasource from '../datasource/TVGuideDatasource';
+import TVEvents from '../events/TVEvents';
 
 class TVGuideActionCreator extends BaseActionCreator {
   async loadGuide() {

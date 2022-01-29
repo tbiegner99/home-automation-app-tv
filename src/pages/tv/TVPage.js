@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { H3, CurrentTime } from '@tbiegner99/home-automation-components';
 import TVGuide from './guide/TVGuide';
+
 import Urls from '../../utils/Urls';
 import NavBar from './navs/NavBar';
-import TVGuideActionCreator from '../../actionCreators/tv/GuideActionCreator';
-import TVActionCreator from '../../actionCreators/tv/TVActionCreator';
-import CurrentTime from '../../components/elements/CurrentTime';
+import TVGuideActionCreator from '../../actionCreators/GuideActionCreator';
+import TVActionCreator from '../../actionCreators/TVActionCreator';
 
 import styles from './tvPage.css';
-import { H3 } from '../../components/elements/Headers';
 
 const TEN_MINUTES = 10 * 60 * 1000;
 const GUIDE_LENGTH_IN_HOURS = 2;
@@ -77,7 +77,4 @@ const mapDispatchToProps = () => ({
   }
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TVPage);
+export default connect(mapStateToProps, mapDispatchToProps)(TVPage);

@@ -1,7 +1,7 @@
 import { BaseActionCreator } from '@tbiegner99/ui-app-components';
 
 import TVDatasource from '../datasource/TVDatasource';
-import TVEvents from '../../events/TVEvents';
+import TVEvents from '../events/TVEvents';
 
 class TVActionCreator extends BaseActionCreator {
   async powerOn() {

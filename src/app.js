@@ -3,17 +3,19 @@ import { Provider } from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 //import Router from './routes';
-import rootReducer from '../reducers/rootReducer';
+import rootReducer from './reducers/rootReducer';
 import singleSpaReact from 'single-spa-react';
 import { DispatcherFactory } from '@tbiegner99/ui-app-components';
-import TVPage from './tv/TVPage';
+import TVPage from './pages/tv/TVPage';
 
 const store = createStore(rootReducer);
 DispatcherFactory.setDispatchingStrategy(store);
 
-const Main = (props) => <Provider store={store}>
-    <TVPage />
+const Main = (props) => (
+  <Provider store={store}>
+    <TVPage {...props} />
   </Provider>
+);
 
 const reactLifecycles = singleSpaReact({
   React,

@@ -1,12 +1,12 @@
 import React from 'react';
-import moment from 'moment';
-import Checkbox from 'reactforms/src/form/elements/Checkbox';
+import dayjs from 'moment';
+import { Modal } from '@tbiegner99/home-automation-components';
+import { Checkbox } from '@tbiegner99/react-forms';
 
 import GuideHeader from './GuideHeader';
 import ChannelGuide from './ChannelGuide';
 import TimeMarker from './TimeMarker';
 import SelectedProgramInfo from './SelectedProgramInfo';
-import Modal from '../../../components/elements/modal/Modal';
 
 import styles from './tvGuide.css';
 
@@ -14,7 +14,7 @@ const ONE_SECOND = 1000;
 const ONE_MINUTE = 60 * ONE_SECOND;
 
 const getTime = () => {
-  const now = moment();
+  const now = dayjs();
   const minutesPastHour = now.minute();
   if (minutesPastHour >= 30) {
     return now.startOf('hour').add(30, 'minutes');

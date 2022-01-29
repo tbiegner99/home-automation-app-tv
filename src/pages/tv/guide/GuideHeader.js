@@ -1,9 +1,9 @@
 import React from 'react';
-import moment from 'moment';
+import dayjs from 'moment';
 import styles from './guideHeader.css';
 
 const renderNext3Hours = (startTime, numColumns, style) => {
-  const time = moment(startTime);
+  const time = dayjs(startTime);
   const components = [];
 
   for (let i = 0; i < numColumns; i++) {

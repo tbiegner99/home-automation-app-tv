@@ -1,6 +1,6 @@
 import { AbstractReducingStore, StoreField } from '@tbiegner99/ui-app-components';
 import TVEvents from '../../events/TVEvents';
-import TVGuideActionCreator from '../../actionCreators/tv/GuideActionCreator';
+import TVGuideActionCreator from '../../actionCreators/GuideActionCreator';
 
 class TVStore extends AbstractReducingStore {
   constructor() {

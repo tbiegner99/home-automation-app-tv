@@ -1,8 +1,7 @@
 import React from 'react';
-
-import styles from './selectedProgramInfo.css';
 import moment from 'moment';
-import { H2 } from '../../../components/elements/Headers';
+import { H2 } from '@tbiegner99/home-automation-components';
+import styles from './selectedProgramInfo.css';
 
 class SelectedProgramInfo extends React.Component {
   getCurrentProgram(programs) {

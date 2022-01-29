@@ -1,5 +1,5 @@
 import React from 'react';
-import moment from 'moment';
+import dayjs from 'moment';
 import styles from './channelGuide.css';
 
 class ChannelGuide extends React.Component {
@@ -7,10 +7,10 @@ class ChannelGuide extends React.Component {
     const { startTime: guideStartTime, guideLengthInHours, numberOfColumns } = this.props;
 
     const { endTime, startTime } = program;
-    const guideStart = moment(guideStartTime);
-    const guideEnd = moment(guideStart).add(guideLengthInHours, 'hours');
+    const guideStart = dayjs(guideStartTime);
+    const guideEnd = dayjs(guideStart).add(guideLengthInHours, 'hours');
 
-    return moment(startTime).isSameOrBefore(guideEnd) && moment(endTime).isAfter(guideStart);
+    return dayjs(startTime).isSameOrBefore(guideEnd) && dayjs(endTime).isAfter(guideStart);
   }
 
   renderChannelInfo() {
@@ -43,13 +43,13 @@ class ChannelGuide extends React.Component {
     const BASE_WIDTH_PCT = 100 / (numberOfColumns + 1);
 
     const specialClass = '';
-    const programStart = moment(startTime);
-    const programEnd = moment(endTime);
-    const guideStart = moment(guideStartTime);
-    const guideEnd = moment(guideStartTime).add(guideLengthInHours, 'hours');
+    const programStart = dayjs(startTime);
+    const programEnd = dayjs(endTime);
+    const guideStart = dayjs(guideStartTime);
+    const guideEnd = dayjs(guideStartTime).add(guideLengthInHours, 'hours');
 
-    const rangeStart = moment.max(guideStart, programStart);
-    const rangeEnd = moment.min(guideEnd, programEnd);
+    const rangeStart = dayjs.max(guideStart, programStart);
+    const rangeEnd = dayjs.min(guideEnd, programEnd);
 
     const rangeRuntime = rangeEnd.diff(rangeStart, 'minutes');
     const pct = BASE_WIDTH_PCT * (rangeRuntime / 30);
