@@ -1,7 +1,7 @@
 {
-  "name": "@tbiegner99/home-automation-main-ui",
+  "name": "@tbiegner99/home-automation-app-tv",
   "version": "1.0.0",
-  "description": "kareoke app",
+  "description": "tv manager app",
   "main": "lib/index.js",
   "directories": {
     "lib": "src"
@@ -52,6 +52,21 @@
     "webpack-dev-server": "^4.7.2"
   },
   "dependencies": {
-    "single-spa": "^5.9.3"
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@tbiegner99/home-automation-components": "^1.0.1",
+    "@tbiegner99/react-forms": "^1.0.14",
+    "@tbiegner99/ui-app-components": "^1.0.1",
+    "auto-bind-inheritance": "^1.0.6",
+    "classnames": "^2.3.1",
+    "moment": "^2.29.1",
+    "prop-types": "^15.8.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-redux": "^7.2.6",
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1",
+    "redux": "^4.1.2",
+    "single-spa": "^5.9.3",
+    "single-spa-react": "^4.6.1"
   }
 }

@@ -1,0 +1,46 @@
+.channelGuide {
+    display:flex;
+    font-size:15px;
+    width:100%;
+}
+.channelColumn, .column {
+    border:1px solid black;
+    height: 40px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+   display:flex;
+   align-items: center;
+    overflow: hidden;
+}
+
+.programText {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width:100%;
+    padding: 0px 5px;
+
+}
+
+.channelColumn {
+    display: flex;
+    align-items: center;
+    
+}
+.channelNumber {
+    padding:0px 10px;
+    font-weight: bold;
+}
+
+.channelName {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 5px;
+    overflow: hidden;
+    flex-grow: 1;
+
+}
+.channelIcon {
+    width:25%;
+    padding-right:5px;
+}

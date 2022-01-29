@@ -1,5 +1,4 @@
-import AbstractReducingStore from '../AbstractReducingStore';
-import StoreField from '../StoreField';
+import { AbstractReducingStore, StoreField } from '@tbiegner99/ui-app-components';
 import TVEvents from '../../events/TVEvents';
 import TVGuideActionCreator from '../../actionCreators/tv/GuideActionCreator';
 

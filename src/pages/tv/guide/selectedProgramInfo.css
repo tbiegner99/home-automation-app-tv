@@ -1,0 +1,55 @@
+.selectedProgramInfo {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+}
+.buttonBar {
+    display:flex;
+    justify-content: center;
+}
+
+ .button {
+    padding:10px;
+    display: inline;
+}
+.header h2 {
+    margin:0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding:20px 0;
+}
+.image {
+    padding:10px;
+    display:flex;
+    align-items: center;
+    width:30%;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.logo {
+    width:100%;
+}
+
+.programInfo {
+    padding:10px;
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+.programDescription {
+    overflow: auto;
+    flex-grow:1;
+}
+.body {
+    display:flex;
+    padding:20px 0;
+    width:100%;
+    flex-grow:1;
+    overflow: hidden;
+}

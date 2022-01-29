@@ -1,0 +1,13 @@
+.guideHeader {
+    display:flex;
+    border-bottom: 1px solid black;
+    
+}
+
+.channelColumn {
+    text-align: center;
+}
+:first-of-type(.column) {
+    padding-left:5px;
+}
+
