@@ -1,4 +1,4 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 class TVGuideSerializer {
   fromProgramDetails(broadcast) {
@@ -7,11 +7,11 @@ class TVGuideSerializer {
       title: broadcast.title,
       plot: broadcast.plot,
       plotOutline: broadcast.plotOutline,
-      startTime: moment(broadcast.startTime),
-      endTime: moment(broadcast.endTime),
+      startTime: dayjs(broadcast.startTime),
+      endTime: dayjs(broadcast.endTime),
       runtime: broadcast.runtime,
       genre: broadcast.genre,
-      firstAired: moment(broadcast.firstAired),
+      firstAired: dayjs(broadcast.firstAired),
       parentalRating: broadcast.parentalRating,
       thumbnail: broadcast.thumbnail,
       rating: broadcast.rating,
@@ -42,7 +42,7 @@ class TVGuideSerializer {
   fromChannelGuideInfo(channelGuideData) {
     const programs = channelGuideData.programs.map(this.fromProgramDetails.bind(this));
     const byStartDate = (pgm1, pgm2) =>
-      moment(pgm1.startTime).isAfter(moment(pgm2.startTime)) ? 1 : -1;
+      dayjs(pgm1.startTime).isAfter(dayjs(pgm2.startTime)) ? 1 : -1;
     programs.sort(byStartDate);
     return {
       ...this.fromChannelInfo(channelGuideData),

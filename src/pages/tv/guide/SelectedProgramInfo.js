@@ -1,11 +1,11 @@
 import React from 'react';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import { H2 } from '@tbiegner99/home-automation-components';
 import styles from './selectedProgramInfo.css';
 
 class SelectedProgramInfo extends React.Component {
   getCurrentProgram(programs) {
-    const endsAfterNow = (program) => moment(program.endTime).isAfter(moment());
+    const endsAfterNow = (program) => dayjs(program.endTime).isAfter(dayjs());
     return programs.filter(endsAfterNow)[0];
   }
 

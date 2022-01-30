@@ -1,5 +1,5 @@
 import React from 'react';
-import dayjs from 'moment';
+import dayjs from 'dayjs';
 import { Modal } from '@tbiegner99/home-automation-components';
 import { Checkbox } from '@tbiegner99/react-forms';
 

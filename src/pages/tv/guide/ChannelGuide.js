@@ -1,6 +1,12 @@
 import React from 'react';
-import dayjs from 'moment';
+import dayjs from 'dayjs';
+import minMax from 'dayjs/plugin/minMax';
+import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
 import styles from './channelGuide.css';
+
+dayjs.extend(isSameOrBefore);
+
+dayjs.extend(minMax);
 
 class ChannelGuide extends React.Component {
   programsInGuideRange(program) {
@@ -42,7 +48,6 @@ class ChannelGuide extends React.Component {
     const { title, startTime, endTime } = program;
     const BASE_WIDTH_PCT = 100 / (numberOfColumns + 1);
 
-    const specialClass = '';
     const programStart = dayjs(startTime);
     const programEnd = dayjs(endTime);
     const guideStart = dayjs(guideStartTime);
