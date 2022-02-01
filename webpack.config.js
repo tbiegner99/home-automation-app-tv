@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   devtool: 'source-map',
-  mode: 'development',
+  mode: 'production',
   entry: './src/app.js',
   output: {
     filename: 'tv-app.js', // '[name].[contenthash].bundle.js',
@@ -15,7 +15,7 @@ module.exports = {
   devServer: {
     hot: true,
     host: '0.0.0.0',
-    port: 8002,
+    port: 8004,
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',

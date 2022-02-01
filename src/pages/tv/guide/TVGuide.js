@@ -1,7 +1,6 @@
 import React from 'react';
 import dayjs from 'dayjs';
-import { Modal } from '@tbiegner99/home-automation-components';
-import { Checkbox } from '@tbiegner99/react-forms';
+import { Modal, Checkbox } from '@tbiegner99/home-automation-components';
 
 import GuideHeader from './GuideHeader';
 import ChannelGuide from './ChannelGuide';
