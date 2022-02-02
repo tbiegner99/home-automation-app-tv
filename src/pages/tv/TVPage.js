@@ -26,12 +26,12 @@ class TVPage extends React.Component {
     const { tvGuide, onTune, onChangeUrl, onPowerOn, onPowerOff, onToggleMute } = this.props;
     return (
       <div className={styles.tvPage}>
-        <NavBar
+        {/* <NavBar
           onPowerOn={onPowerOn}
           onPowerOff={onPowerOff}
           onToggleMute={onToggleMute}
           onHomeClick={() => onChangeUrl(Urls.HOME)}
-        />
+        /> */}
         <div className={styles.tvContent}>
           <H3 className={styles.time}>
             <CurrentTime format="dddd MMMM D YYYY" />

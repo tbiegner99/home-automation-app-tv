@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import styles from './guideHeader.css';
 
 const renderNext3Hours = (startTime, numColumns, style) => {
-  const time = dayjs(startTime);
+  let time = dayjs(startTime);
   const components = [];
 
   for (let i = 0; i < numColumns; i++) {
@@ -12,7 +12,7 @@ const renderNext3Hours = (startTime, numColumns, style) => {
         {time.format('h:mm')}
       </div>
     );
-    time.add(30, 'minutes');
+    time = time.add(30, 'minutes');
   }
   return components;
 };
